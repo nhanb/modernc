@@ -1,5 +1,10 @@
+CC = clang -Wall
+
+run: out/bad
+	./out/bad
+
 out/bad: bad.c
-	c99 -Wall -o out/bad bad.c
+	$(CC) -o out/bad bad.c
 
 out/getting-started: getting-started.c
-	c99 -Wall -o out/getting-started getting-started.c -lm
+	$(CC) -o out/getting-started getting-started.c -lm
